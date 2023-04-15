@@ -1,3 +1,4 @@
+intellij idea idea, scenebuilder
 Необходима mircoSD карта, и образ OS записываем на нее
 1) Установка OS
     1.2) Скачайте Ubuntu для Orange Pi 3 http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-pi-3-LTS.html
