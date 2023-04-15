@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.sidlight.vendorapp.gui.SettingController">
+   <children>
+      <ImageView fitHeight="774.0" fitWidth="1372.0" layoutX="-3.0" layoutY="-6.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="3.0" layoutY="6.0" prefHeight="472.0" prefWidth="784.0">
+         <children>
+            <ImageView fx:id="backButton" fitHeight="150.0" fitWidth="150.0" onMouseClicked="#onBack" onTouchPressed="#onBack">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="wifiButton" layoutX="120.0" layoutY="168.0" onMouseClicked="#onWifi" onTouchPressed="#onWifi">
+               <image>
+                  <Image url="@wifi.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blueButton" fitHeight="249.0" fitWidth="234.0" layoutX="85.0" layoutY="318.0" onMouseClicked="#onBlue" onTouchPressed="#onBlue">
+               <image>
+                  <Image url="@blue.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

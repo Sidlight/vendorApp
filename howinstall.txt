@@ -1,0 +1,40 @@
+Необходима mircoSD карта, и образ OS записываем на нее
+1) Установка OS
+    1.2) Скачайте Ubuntu для Orange Pi 3 http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-pi-3-LTS.html
+    1.3) Скачайте программу "SD Formatter" http://orangepi.su/files/SDFormatterv4.zip
+    1.4) Запустите SD Formatter, зайдите в "Options" и в открывшемся окне задайте "FORMAT TYPE" выбрать "FULL (OverWrite)", а в графе "FORMAT SIZE ADJUSTMENT" выбрать "ON". Далее нажмите "OK".
+    1.5) Нажмите "Format" и ждите полного форматирования карты.
+    1.6) Скачайте "Win32 Diskimage" по этому адресу http://orangepi.su/files/Win32DiskImager-0.9.5-install.rar
+    1.7) Выберите образ системы, карту куда будет записываться OS и нажмите "Write" и ждите когда завершится процесс записи.
+    1.8) Вставите карту в Orange Pi 3 и включите
+    1.9) Откройте терминал и введите команду sudo nand-sata-install. Пароль тут и далее orangepi
+    1.10) Выберите первый пункт и запустите установку
+    1.11) Перезагрузите и достаньте флеш карту
+2) Jre для выполнения
+    2.1) Скачайте Liberica FULL jre 17 для Linux с процессором на архитектуре ARM https://bell-sw.com/pages/downloads/
+    2.2) Откройте терминал и установите jre при помощи команды sudo dpkg -i "Название скачаной jre"
+3) Скопируйте файлы vendorApp.jre, logo.mp4, black.jpg в каталог /home/orangepi/
+4) Установите на рабочий стол изображение black.jpg
+Далее для работы потребуется интернет соединение
+5) Для работы пинов необходима библиотека WiringOP, выполнить в терминале команду
+    5.1) sudo apt-get update
+    5.2) sudo apt-get install git-core
+    5.3)cd /home/orangepi/
+    5.4)git clone https://github.com/orangepi-xunlong/wiringOP.git
+    5.5)cd wiringOP
+    5.6)chmod +x ./build
+    5.7)sudo ./build
+    5.8)для проверки ввести команду gpio readall
+6)Для добавления приложения в автозапуск необходимо ввести команду sudo nano /etc/xdg/autostart/myapp.desktop
+    6.1) Ввести следующий текст
+        [Desktop Entry]
+        Name=myapp
+        Exec=java -jar /home/orangepi/vendorApp.jar
+        StartupNotify=false
+    6.2) Нажать ctrl+o и дальше Enter что бы сохранить
+7)Для отключения логов загрузки надо:
+    7.1)ввести команду sudo nano /boot/orangepiEnv.txt
+    8.2)Заменить параметр console=both на console=quiet
+    9.3) Нажать ctrl+o и дальше Enter что бы сохранить
+10)Скрыть панель задачах в настройках
+11)Перезагрузить систему

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane
+        fx:controller="xyz.sidlight.vendorapp.gui.MainPaneController"
+
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="774.0" fitWidth="1374.0" layoutX="-3.0" layoutY="-6.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1.0" prefHeight="768.0" prefWidth="1366.0">
+         <children>
+            <ImageView fx:id="menuButton" fitHeight="200.0" fitWidth="200.0" layoutX="78.0" layoutY="37.0" onMouseClicked="#onMenuMenu" onTouchPressed="#onMenuMenu">
+               <image>
+                  <Image url="@menu.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settingsButton" fitHeight="200.0" fitWidth="200.0" layoutX="335.0" layoutY="37.0" onMouseClicked="#onSettingsMenu" onTouchPressed="#onSettingsMenu">
+               <image>
+                  <Image url="@settings.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="powerButton" fitHeight="200.0" fitWidth="200.0" layoutX="583.0" layoutY="37.0" onMouseClicked="#onPowerMenu" onTouchPressed="#onPowerMenu">
+               <image>
+                  <Image url="@kwh.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="voltButton" fitHeight="200.0" fitWidth="200.0" layoutX="78.0" layoutY="309.0" onMouseClicked="#onVoltMenu" onTouchPressed="#onVoltMenu">
+               <image>
+                  <Image url="@option.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="amperageButton" fitHeight="200.0" fitWidth="200.0" layoutX="335.0" layoutY="309.0" onMouseClicked="#onAmperageMenu" onTouchPressed="#onAmperageMenu">
+               <image>
+                  <Image url="@power.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="testMenu" fitHeight="200.0" fitWidth="200.0" layoutX="590.0" layoutY="309.0" onMouseClicked="#onTestMenu" onTouchPressed="#onTestMenu">
+               <image>
+                  <Image url="@test.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="623.0" prefHeight="112.0" prefWidth="174.0" text="t =">
+               <font>
+                  <Font name="System Bold" size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="623.0" text=" 0 C˚">
+               <font>
+                  <Font name="System Bold Italic" size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
